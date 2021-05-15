@@ -84,34 +84,36 @@ export default {
 .icons >>> .swiper-container
   height: 0
   padding-bottom: 50%
-.icon
-  position: relative
-  overflow: hidden
-  width: 25%
-  height: 0
-  float: left
-  padding-bottom: 25%
-  .icon-img
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: .44rem
-    box-sizing: border-box
-    padding: .1rem
-    .icon-img-content
-      display: block
-      margin: 0 auto
-      height: 100%
-  .icon-desc
-    position: absolute
-    left: 0
-    right: 0
-    bottom: 0
-    line-height: .44rem
-    height: .44rem
-    text-align: center
-    color: $darkTextColor
-    // 借助该css样式实现文字过多出现3个点省略的样式
-    ellipsis()
+.icons
+  margin-top: .2rem
+  .icon
+    position: relative
+    overflow: hidden
+    width: 25%
+    height: 0
+    float: left
+    padding-bottom: 25%
+    .icon-img
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: .44rem
+      box-sizing: border-box
+      padding: .1rem
+      .icon-img-content
+        display: block
+        margin: 0 auto
+        height: 100%
+    .icon-desc
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      line-height: .44rem
+      height: .44rem
+      text-align: center
+      color: $darkTextColor
+      // 借助该css样式实现文字过多出现3个点省略的样式
+      ellipsis()
 </style>
