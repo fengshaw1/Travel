@@ -19,7 +19,7 @@
         </div>
       </div>
 
-      <div class="area" v-for="(item, key) of cities" :key="key">
+      <div class="area" v-for="(item, key) of cities" :key="key" :ref="key">
         <div class="title border-topbottom">{{ key }}</div>
         <div class="item-list">
           <div
@@ -31,7 +31,6 @@
           </div>
         </div>
       </div>
-      
     </div>
   </div>
 </template>
@@ -40,11 +39,21 @@ import Bscroll from "better-scroll";
 export default {
   props: {
     hot: Array,
-    cities: Object
+    cities: Object,
+    letter: String
   },
   name: "CityList",
   mounted() {
     this.scroll = new Bscroll(this.$refs.wrapper);
+  },
+  // 监听字母表字母变化、借助不同的refs进行选择和下滑
+  watch: {
+    letter() {
+      if (this.letter) {
+        const element = this.$refs[this.letter][0];
+        this.scroll.scrollToElement(element);
+      }
+    }
   }
 };
 </script>
