@@ -1,32 +1,32 @@
 <template>
-<div class="wrapper">
-  <swiper :options="swiperOptions">
-    <swiper-slide v-for="(item, index) in swiperList" :key="item.id">
-      <img class="swiper-img" :src="item.imgUrl"/>
-    </swiper-slide>
-    <div class="swiper-pagination" slot="pagination"></div>
-  </swiper>
-</div>
+  <div class="wrapper">
+    <swiper :options="swiperOptions" v-if="showSwiper">
+      <swiper-slide v-for="(item, index) in list" :key="item.id">
+        <img class="swiper-img" :src="item.imgUrl" />
+      </swiper-slide>
+      <div class="swiper-pagination" slot="pagination"></div>
+    </swiper>
+  </div>
 </template>
 <script>
 export default {
   name: "HomeSwiper",
+  props: {
+    list: Array
+  },
   data() {
     return {
       swiperOptions: {
         // 借助该属性显示轮播小点
-        pagination: '.swiper-pagination',
+        pagination: ".swiper-pagination",
         loop: true
-      },
-      swiperList: [{
-        id: '0001',
-        imgUrl: '//imgs.qunarzz.com/vs_ceph_vcimg/79faa5a73731e84a7731db49d5baa91e.jpeg'
-      }, {
-        id: '0002',
-        imgUrl: '//imgs.qunarzz.com/vs_ceph_vcimg/c0a60fa20379efa4f02ce527a680dc1b.jpeg'
       }
-      ]
     };
+  },
+  computed: {
+    showSwiper() {
+      return this.list.length;
+    }
   }
 };
 </script>

@@ -4,7 +4,7 @@
     <ul>
       <li
         class="item border-bottom"
-        v-for="item of recommendList"
+        v-for="item of list"
         :key="item.id"
       >
       <div class="item-img-wrapper">
@@ -19,46 +19,23 @@
   </div>
 </template>
 <script>
-import imgUrl from "../../../assets/test_two.jpg";
 export default {
   name: "HomeWeekend",
-  data() {
-    return {
-      recommendList: [
-        {
-          id: "0001",
-          imgUrl: imgUrl,
-          title: "秦皇岛野生动物园",
-          desc: "近距离感受自然与动物的和谐美"
-        },
-        {
-          id: "0002",
-          imgUrl: imgUrl,
-          title: "秦皇岛野生动物园",
-          desc: "近距离感受自然与动物的和谐美"
-        },
-        {
-          id: "0003",
-          imgUrl: imgUrl,
-          title: "秦皇岛野生动物园",
-          desc: "近距离感受自然与动物的和谐美"
-        }
-      ]
-    };
-  }
+  props: {
+    list: Array
+  },
 };
 </script>
 <style lang="stylus" scoped>
 @import '~styles/mixins.styl'
 .title
-  margin-top: .2rem
   line-height: .8rem
   background: #eee
   text-indent: .2rem
 .item-img.wrapper
   height: 0
   overflow: hidden
-  padding-bottom: 33.9%
+  padding-bottom: 37.09%
   .item-img
     width: 100%
 .item-info

@@ -4,7 +4,7 @@
     <ul>
       <li
         class="item border-bottom"
-        v-for="item of recommendList"
+        v-for="item of list"
         :key="item.id"
       >
         <img class="item-img" :src="item.imgUrl" />
@@ -18,33 +18,11 @@
   </div>
 </template>
 <script>
-import imgUrl from "../../../assets/test.jpg";
 export default {
   name: "Recommend",
-  data() {
-    return {
-      recommendList: [
-        {
-          id: "0001",
-          imgUrl: imgUrl,
-          title: "秦皇岛野生动物园",
-          desc: "近距离感受自然与动物的和谐美"
-        },
-        {
-          id: "0002",
-          imgUrl: imgUrl,
-          title: "秦皇岛野生动物园",
-          desc: "近距离感受自然与动物的和谐美"
-        },
-        {
-          id: "0003",
-          imgUrl: imgUrl,
-          title: "秦皇岛野生动物园",
-          desc: "近距离感受自然与动物的和谐美"
-        }
-      ]
-    };
-  }
+  props: {
+    list: Array
+  },
 };
 </script>
 <style lang="stylus" scoped>
