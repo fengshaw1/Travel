@@ -1,21 +1,26 @@
 # travel
 
-> A Vue.js project
+Hello！:satisfied: this is a app project based on vue.
 
-## Build Setup
+**:memo: TodoList**
 
-``` bash
-# install dependencies
-npm install
+* Home	:heavy_check_mark:
+* City     :hammer:
+* more...
 
-# serve with hot reload at localhost:8080
-npm run dev
+**:toilet:problem**
 
-# build for production with minification
-npm run build
+Welcome to give me some suggesstions.
 
-# build for production and view the bundle analyzer report
-npm run build --report
+**:eyeglasses:Usages**
+
+```shell
+git clone travel
+
+cd travel
+
+npm install 
+
+npm run start
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
