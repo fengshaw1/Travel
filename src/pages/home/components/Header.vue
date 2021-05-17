@@ -10,17 +10,19 @@
     <!-- 借助router-link完成点击之后的页面跳转 -->
     <router-link to="/city">
       <div class="header-right">
-        {{this.city}}
+        {{ this.city }}
         <span class="iconfont arrow-icon">&#xe6aa;</span>
       </div>
     </router-link>
   </div>
 </template>
 <script>
+// vuex的高级使用
+import {mapState} from 'vuex'
 export default {
   name: "HomeHeader",
-  props: {
-    city: String
+  computed: {
+    ...mapState(['city'])
   }
 };
 </script>
@@ -51,10 +53,11 @@ export default {
     border-radius: .1rem
     color: #ccc
   .header-right
-    width: 1.24rem
+    min-width: 1.04rem
+    padding: 0 .1rem
     float: right
     text-align: center
-    color: #fff 
+    color: #fff
     .arrow-icon
       margin-left: -.04rem
       font-size: .24rem
