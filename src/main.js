@@ -1,7 +1,6 @@
 import Vue from "vue";
 import App from "./App";
 import router from "./router";
-import fastClick from "fastclick";
 import store from './store/index'
 // 轮播图插件
 import VueAwesomeSwiper from "vue-awesome-swiper";
@@ -14,7 +13,6 @@ import "styles/iconfont.css";
 
 Vue.config.productionTip = false;
 // 解决移动端300ms点击延迟问题
-fastClick.attach(document.body);
 Vue.use(VueAwesomeSwiper);
 
 /* eslint-disable no-new */
